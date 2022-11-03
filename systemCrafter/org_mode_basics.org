@@ -1,0 +1,74 @@
+* Topics
+
+[[https://www.youtube.com/watch?v=VcgjTEa0kU4&ab_channel=SystemCrafters][org-mode-basics-video]]
+- Headings and Subheadings and Cycling (with shortcuts)
+  - Alt-Up to shift headings
+- Text Formatting
+- Adding link
+  - org-insert-link
+      [[https://www.youtube.com/watch?v=VcgjTEa0kU4&ab_channel=SystemCrafters][Org-mode-basics]]
+- insert tables
+    start typing the header
+    | Name      | Age | Uses Emacs |
+    | Kay       |  34 | Yes        |
+    | Alexander |     |            |
+- go to next visible heading
+- Bullet List
+    1. First Item
+    2. Second Item
+- Bullet list to check list
+    1. [X] First Item
+    2. [X] Second Item
+    3. [ ] 
+       Shift-Alt-Enter to add another Entry with Checkbox 
+- Shilf-Alt-Enter
+    - either heading with TODO
+    - or list with Checkbox
+- Source Code
+
+* ToDo lists
+
+- Shitf-Alt-Enter
+** TODO
+
+- be default only TODO and DONE
+- Configuration [[https://www.youtube.com/watch?v=PNE-mgkZ6HM&ab_channel=SystemCrafters][Emacs From Scratch #6 - Organize Your Life with Org Mode]]
+- org-todo command
+  - opens transient buffer for note taking
+- Or just Shift+Arrow
+
+** DONE 
+CLOSED: [2022-11-03 Thu 10:41]
+
+** TODO
+
+* Some other configuration
+
+- org-ellipsis to ▼
+- org-faces
+  #+begin_src emacs-lisp
+    (dolist (face '((org-level-1 . 1.2)
+                    (org-level-2 . 1.1)
+                    (org-level-3 . 1.05)
+                    (org-level-4 . 1.0)
+                    (org-level-5 . 1.1)
+                    (org-level-6 . 1.1)
+                    (org-level-7 . 1.1)
+                    (org-level-8 . 1.1)))
+      (set-face-attribute (car face) nil :font "Cantarell" :weight 'regular :height (cdr face)))
+  #+end_src
+
+- replace hyphens with bullets
+  does not seem to work
+  #+begin_src emacs-lisp
+    (defun efs/org-font-setup ()
+      ;; Replace list hyphen with dot
+      (font-lock-add-keywords 'org-mode
+                              '(("^ *\\([-]\\) "
+                                 (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•")))))))
+  #+end_src
+
+- possiblity to use variable pitch
+
+- visual-fill-column
+
