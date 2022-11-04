@@ -1,0 +1,31 @@
+[[https://www.youtube.com/watch?v=PNE-mgkZ6HM&ab_channel=SystemCrafters][Organize Your Life with Org Mode]]
+
+* Org Agenda
+
+org-agenda command to open
+
+** Agenda for current day
+
+1. Schedule a task
+2. Schedule a deadline
+3. Configure
+   - org-agenda-files
+   - org-cycle-agenda-files
+4. org-agenda-start-with-log-mode
+
+** Birthday reminder
+
+1. org-time-stamp
+2. Repeating Tasks syntax
+3. 
+
+** Keyword Faces
+
+Checkout customize-group org-todo and different faces
+https://emacs.stackexchange.com/questions/4104/how-to-put-todo-faces-in-the-file
+
+added NEXT to the List
+
+** Low effort Next Actions
+
+Attach an effort to the task (e.g. 15 minutes)
